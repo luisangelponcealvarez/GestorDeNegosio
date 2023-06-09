@@ -1,13 +1,31 @@
-from tkinter import *
+import tkinter as tk
 
-# Crear una ventana 
-ventana = Tk()
+# Crea una instancia de la ventana
+ventana = tk.Tk()
 ventana.title("Gestor De Negocios")
-ventana.geometry("600x600")
+ventana.geometry("400x300")
 
-# Creando titulo 
+# mostrar_texto
+def mostrar_texto():
+    texto = producto.get()
+    datos.config(text=texto) 
+    
 
-lbl = Label(ventana, text="Gestiona tus productos aquí")
-lbl.pack()
+# Nombre del producto
 
+NombreDelProducto = tk.Label(ventana, text="Ingresa el nombre del producto: ")
+NombreDelProducto.pack()
+producto = tk.Entry(ventana)
+producto.pack()
+
+# creando label de texto
+datos = tk.Label(ventana, text="Texto mostrado")
+datos.pack()
+
+# Botón para obtener los datos
+boton = tk.Button(ventana, text="Obtener datos", command=mostrar_texto)
+boton.pack()
+
+
+# Ejecuta el bucle principal de la ventana
 ventana.mainloop()
