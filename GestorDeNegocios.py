@@ -4,11 +4,11 @@ from tkinter import messagebox
 from tkinter import ttk
 from datetime import datetime
 
-
 class GestorTienda:
     def __init__(self, root):
         self.root = root
         self.root.title("Gestor de Tienda")
+        self.root.iconbitmap("D:\mis archivos\documentos\PersonalesProyectos\GestorDeNegosio\icono.ico")
 
         # Crear la conexión con la base de datos
         self.conexion = sqlite3.connect("tienda.db")
