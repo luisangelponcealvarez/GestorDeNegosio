@@ -86,7 +86,7 @@ class GestorTienda:
         for producto in productos:
             self.tabla.insert("", "end", values=producto)
 
-    def seleccionar_producto(self, event):
+    def seleccionar_producto(self):
         fila_seleccionada = self.tabla.selection()
         if fila_seleccionada:
             producto = self.tabla.item(fila_seleccionada)["values"]
